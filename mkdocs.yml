@@ -1,0 +1,27 @@
+site_name: GnuCash for Mere Mortals
+site_description: Proper double-entry bookkeeping for a household or a tiny business. GnuCash keeps your accounts in one book where every payment has a source and a destination, and this guide builds a small book for real, checks that it balances two independent ways, and states the limits plainly.
+site_url: https://paulsullivan33-dev.github.io/gnucash-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text CC BY 4.0, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What GnuCash Is: what-gnucash-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing GnuCash: installing-gnucash.md
+  - Your First Book: your-first-book.md
+  - Entering Transactions: entering-transactions.md
+  - Split Transactions: split-transactions.md
+  - Proving the Books Balance: proving-the-books-balance.md
+  - The Book Is a Database: the-book-is-a-database.md
+  - Reports: reports.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

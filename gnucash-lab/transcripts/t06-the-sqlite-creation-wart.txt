@@ -1,0 +1,13 @@
+$ python3 ~/workspace/gnucash-labwork/wart-repro.py
+
+(process:67364): dconf-WARNING **: 08:34:43.434: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
+* 08:34:47 ERROR <gnc.backend.dbi> [error_handler()] DBI error: 19: UNIQUE constraint failed: books.guid
+* 08:34:47 ERROR <gnc.backend.dbi> [GncDbiSqlConnection::execute_nonselect_statement()] Error executing SQL INSERT INTO books(guid,root_account_guid,root_template_guid) VALUES('cc01cb917f9d4cf1bcc8c1c20b3e1a64','9a1a690d0950420eafefe1132951759a','b2bcd4d01d10400e860819ef0419df01')
+* 08:34:47 ERROR <gnc.backend.sql> [GncSqlBackend::execute_nonselect_statement()] SQL error: INSERT INTO books(guid,root_account_guid,root_template_guid) VALUES('cc01cb917f9d4cf1bcc8c1c20b3e1a64','9a1a690d0950420eafefe1132951759a','b2bcd4d01d10400e860819ef0419df01')
+* 08:34:47 ERROR <qof.engine> [commit_err()] Failed to commit: 17
+save() returned normally
+
+$ python3 -c "import sqlite3; db = sqlite3.connect('/home/hatch/workspace/gnucash-labwork/wart.sqlite3'); print('books rows:', db.execute('SELECT COUNT(*) FROM books').fetchone()[0]); print('accounts rows:', db.execute('SELECT COUNT(*) FROM accounts').fetchone()[0])"
+books rows: 1
+accounts rows: 1
+

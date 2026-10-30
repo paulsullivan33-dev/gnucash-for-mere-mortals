@@ -1,0 +1,41 @@
+$ file ~/workspace/gnucash-labwork/household.sqlite3
+/home/hatch/workspace/gnucash-labwork/household.sqlite3: SQLite 3.x database, last written using SQLite version 3045001, file counter 103, database pages 52, cookie 0x1c, schema 4, UTF-8, version-valid-for 103
+
+$ python3 ~/workspace/gnucash-for-mere-mortals/gnucash-lab/peek-book.py ~/workspace/gnucash-labwork/household.sqlite3
+Tables in the book: 25
+  books          1 rows
+  accounts       16 rows
+  transactions   8 rows
+  splits         18 rows
+  commodities    1 rows
+
+Accounts (name, type):
+  Assets             ASSET
+  Checking Account   BANK
+  Credit Card        CREDIT
+  Equity             EQUITY
+  Expenses           EXPENSE
+  Groceries          EXPENSE
+  Income             INCOME
+  Interest Income    INCOME
+  Liabilities        LIABILITY
+  Opening Balances   EQUITY
+  Rent               EXPENSE
+  Salary             INCOME
+  Savings Account    BANK
+  Transport          EXPENSE
+  Utilities          EXPENSE
+
+Split totals by account (engine sign convention):
+  Checking Account     3,584.60
+  Credit Card              0.00
+  Groceries              145.65
+  Interest Income         -3.25
+  Opening Balances    -3,000.00
+  Rent                 1,200.00
+  Salary              -2,500.00
+  Savings Account        503.25
+  Transport               24.65
+  Utilities               45.10
+  TOTAL                    0.00  (must be 0.00)
+

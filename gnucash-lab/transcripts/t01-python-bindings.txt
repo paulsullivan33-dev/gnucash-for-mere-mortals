@@ -1,0 +1,9 @@
+$ python3 -c "import gnucash; print('bindings file:', gnucash.__file__)"
+
+(process:66722): dconf-WARNING **: 08:33:03.622: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
+bindings file: /home/hatch/workspace/gnucash-labwork/root/usr/lib/python3/dist-packages/gnucash/__init__.py
+
+$ python3 -c "from gnucash import Session, SessionOpenMode; s = Session(is_new=True); print('empty session opened; book root:', s.book.get_root_account().GetName()); s.end(); print('session closed cleanly')" 2>/dev/null
+empty session opened; book root: Root Account
+session closed cleanly
+

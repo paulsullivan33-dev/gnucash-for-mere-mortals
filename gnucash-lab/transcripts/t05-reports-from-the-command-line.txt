@@ -1,0 +1,22 @@
+$ /home/hatch/workspace/gnucash-labwork/root/usr/bin/gnucash-cli --report run --name "Balance Sheet" /home/hatch/workspace/gnucash-labwork/household.sqlite3 > ~/workspace/gnucash-labwork/balance-sheet.html 2>/dev/null; echo "exit=$?"
+exit=0
+
+$ /home/hatch/workspace/gnucash-labwork/root/usr/bin/gnucash-cli --report run --name "Income Statement" /home/hatch/workspace/gnucash-labwork/household.sqlite3 > ~/workspace/gnucash-labwork/income-statement.html 2>/dev/null; echo "exit=$?"
+exit=0
+
+$ ls -la ~/workspace/gnucash-labwork/balance-sheet.html ~/workspace/gnucash-labwork/income-statement.html
+-rw-rw---- 1 root root 5792 Oct 30 08:34 /home/hatch/workspace/gnucash-labwork/balance-sheet.html
+-rw-rw---- 1 root root 5985 Oct 30 08:34 /home/hatch/workspace/gnucash-labwork/income-statement.html
+
+$ grep -o "Total Assets" ~/workspace/gnucash-labwork/balance-sheet.html | head -1
+Total Assets
+
+$ grep -o "4,087.85" ~/workspace/gnucash-labwork/balance-sheet.html | wc -l
+3
+
+$ grep -o "Net income for Period" ~/workspace/gnucash-labwork/income-statement.html | head -1
+Net income for Period
+
+$ grep -o "1,087.85" ~/workspace/gnucash-labwork/income-statement.html | wc -l
+1
+

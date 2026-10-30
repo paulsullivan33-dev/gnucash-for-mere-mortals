@@ -1,0 +1,25 @@
+$ python3 ~/workspace/gnucash-labwork/xml-sample.py 2>/dev/null
+
+$ file ~/workspace/gnucash-labwork/sample.gnucash
+/home/hatch/workspace/gnucash-labwork/sample.gnucash: gzip compressed data, from Unix, original size modulo 2^32 2605
+
+$ zcat ~/workspace/gnucash-labwork/sample.gnucash | head -8
+<?xml version="1.0" encoding="utf-8" ?>
+<gnc-v2
+     xmlns:gnc="http://www.gnucash.org/XML/gnc"
+     xmlns:act="http://www.gnucash.org/XML/act"
+     xmlns:book="http://www.gnucash.org/XML/book"
+     xmlns:cd="http://www.gnucash.org/XML/cd"
+     xmlns:cmdty="http://www.gnucash.org/XML/cmdty"
+     xmlns:price="http://www.gnucash.org/XML/price"
+
+$ zcat ~/workspace/gnucash-labwork/sample.gnucash | grep -c "gnc:account version"
+2
+
+$ zcat ~/workspace/gnucash-labwork/sample.gnucash | grep -A1 "act:name" | head -6
+  <act:name>Root Account</act:name>
+  <act:id type="guid">65861a0f940d4490a77154de10e9835a</act:id>
+--
+  <act:name>Assets</act:name>
+  <act:id type="guid">d3e38859d956444bae94f2551e090ee3</act:id>
+

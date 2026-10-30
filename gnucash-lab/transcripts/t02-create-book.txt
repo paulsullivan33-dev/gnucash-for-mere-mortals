@@ -1,0 +1,13 @@
+$ python3 ~/workspace/gnucash-for-mere-mortals/gnucash-lab/create-book.py ~/workspace/gnucash-labwork/household.sqlite3
+
+(process:67283): dconf-WARNING **: 08:34:21.142: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
+* 08:34:25 ERROR <gnc.backend.dbi> [error_handler()] DBI error: 19: UNIQUE constraint failed: books.guid
+* 08:34:25 ERROR <gnc.backend.dbi> [GncDbiSqlConnection::execute_nonselect_statement()] Error executing SQL INSERT INTO books(guid,root_account_guid,root_template_guid) VALUES('42e0db3a587d41039cf62ce71a90642d','d51fab77f8f34f02892403e5e5e34ddd','73c0dad5a57a44948fa222f086590a29')
+* 08:34:25 ERROR <gnc.backend.sql> [GncSqlBackend::execute_nonselect_statement()] SQL error: INSERT INTO books(guid,root_account_guid,root_template_guid) VALUES('42e0db3a587d41039cf62ce71a90642d','d51fab77f8f34f02892403e5e5e34ddd','73c0dad5a57a44948fa222f086590a29')
+* 08:34:25 ERROR <qof.engine> [commit_err()] Failed to commit: 17
+Book written to /home/hatch/workspace/gnucash-labwork/household.sqlite3
+Accounts in book: 15
+
+$ ls -la ~/workspace/gnucash-labwork/household.sqlite3
+-rw-r----- 1 root root 212992 Oct 30 08:34 /home/hatch/workspace/gnucash-labwork/household.sqlite3
+

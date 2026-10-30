@@ -1,0 +1,31 @@
+$ python3 ~/workspace/gnucash-for-mere-mortals/gnucash-lab/check-book.py ~/workspace/gnucash-labwork/household.sqlite3 2>/dev/null
+== Account tree with balances ==
+Assets: $4,087.85
+  Checking Account: $3,584.60
+  Savings Account: $503.25
+Liabilities: $0.00
+  Credit Card: $0.00
+Income: $2,503.25
+  Interest Income: $3.25
+  Salary: $2,500.00
+Expenses: $1,415.40
+  Groceries: $145.65
+  Rent: $1,200.00
+  Transport: $24.65
+  Utilities: $45.10
+Equity: $3,000.00
+  Opening Balances: $3,000.00
+
+== Trial balance ==
+Transactions in book: 8
+Splits in book:       18
+Sum of all splits:    $0.00  (must be 0.00)
+
+== The accounting equation ==
+Assets:                    $4,087.85
+Liabilities:               $0.00
+Equity:                    $3,000.00
+Income - Expenses:         $2,503.25 - $1,415.40 = $1,087.85
+Liabilities + Equity + (Income - Expenses) = $4,087.85
+Balanced: True
+

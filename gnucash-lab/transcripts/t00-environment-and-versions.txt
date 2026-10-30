@@ -1,0 +1,17 @@
+$ uname -srm
+Linux 7.0.0-39-generic x86_64
+
+$ grep PRETTY_NAME /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+
+$ ls ~/workspace/gnucash-labwork/debs/*.deb | wc -l
+7
+
+$ dpkg-deb -f ~/workspace/gnucash-labwork/debs/gnucash_*.deb Package Version
+Package: gnucash
+Version: 1:5.5-1.2build1
+
+$ ~/workspace/gnucash-labwork/root/usr/bin/gnucash-cli --version
+GnuCash 5.5
+Build ID: 5.5+(2023-12-16)
+
